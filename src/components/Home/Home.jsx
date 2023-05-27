@@ -5,7 +5,6 @@ import fetchMovies from 'api/fetchMovies';
 const Home = () => {
   const [trending, setTrending] = useState([]);
   const location = useLocation();
-  console.log(location);
 
   useEffect(() => {
     fetchMovies('trending').then(res => setTrending(res));

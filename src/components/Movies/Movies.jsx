@@ -24,7 +24,6 @@ const Movies = () => {
 
   const updateQuery = e => {
     const value = e.target.value;
-    console.log(e.target.value);
     if (value === '') {
       return setParams({});
     }
