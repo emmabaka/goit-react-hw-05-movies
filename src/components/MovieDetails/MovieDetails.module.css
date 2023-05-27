@@ -1,0 +1,12 @@
+
+.back {
+  display: flex;
+  align-items: center;
+  padding-bottom: 15px;
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+}
+.movie {
+  padding-top: 20px;
+}
