@@ -15,17 +15,18 @@ const Home = () => {
       <section>
         <div className="container">
           <ul>
-            {trending.map(item => (
-              <li key={item.id}>
-                <Link
-                  key={item.id}
-                  to={`/movies/${item.id}`}
-                  state={{ from: location }}
-                >
-                  {item.title ?? item.name}
-                </Link>
-              </li>
-            ))}
+            {trending &&
+              trending.map(item => (
+                <li key={item.id}>
+                  <Link
+                    key={item.id}
+                    to={`/movies/${item.id}`}
+                    state={{ from: location }}
+                  >
+                    {item.title ?? item.name}
+                  </Link>
+                </li>
+              ))}
           </ul>
         </div>
       </section>

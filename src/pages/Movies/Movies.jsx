@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, useSearchParams, useLocation } from 'react-router-dom';
 import fetchMovies from 'api/fetchMovies';
-import css from './Movies.module.css'
+import css from './Movies.module.css';
 
 const Movies = () => {
   const [filter, setFilter] = useState('');
@@ -43,17 +43,18 @@ const Movies = () => {
           <button type="submit">Search</button>
         </form>
         <ul>
-          {movies.map(item => (
-            <li key={item.id}>
-              <Link
-                key={item.id}
-                to={`/movies/${item.id}`}
-                state={{ from: location }}
-              >
-                {item.title}
-              </Link>
-            </li>
-          ))}
+          {movies &&
+            movies.map(item => (
+              <li key={item.id}>
+                <Link
+                  key={item.id}
+                  to={`/movies/${item.id}`}
+                  state={{ from: location }}
+                >
+                  {item.title}
+                </Link>
+              </li>
+            ))}
         </ul>
       </div>
     </section>
